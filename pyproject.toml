@@ -1,0 +1,6 @@
+[build-system]
+requires = [
+    "maturin>=0.10,<0.11",
+    "wheel",
+]
+build-backend = "maturin"

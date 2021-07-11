@@ -32,7 +32,15 @@ jobs:
             profile: minimal
             default: true
 
-        - name: Build wheels - x86_64
+        - name: Build wheels - x86_64 - PyPy
+          if: startsWith(matrix.python-version, 'pypy')
+          uses: messense/maturin-action@v1
+          with:
+            target: x86_64
+            args: --release --out dist --no-sdist --cargo-extra-args="--no-default-features" -m Cargo.toml
+
+        - name: Build wheels - x86_64 - CPython
+          if: "!startsWith(matrix.python-version, 'pypy')"
           uses: messense/maturin-action@v1
           with:
             target: x86_64

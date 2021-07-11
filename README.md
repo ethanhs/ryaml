@@ -106,3 +106,5 @@ This project is standing on the shoulders of giants, and would not be possible w
 [yaml-rust](https://github.com/chyh1990/yaml-rust)
 
 [pyo3-file](https://github.com/omerbenamram/pyo3-file)
+
+[pythonize](https://github.com/davidhewitt/pythonize)

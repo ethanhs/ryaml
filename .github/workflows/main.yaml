@@ -50,7 +50,7 @@ jobs:
           if: startsWith(matrix.os, 'macos')
           uses: messense/maturin-action@v1
           with:
-            args: --release --universal2 --out dist --no-sdist -m Cargo.toml
+            args: --release --universal2 --out dist --cargo-extra-args="--features=abi3" --no-sdist -m Cargo.toml
 
         - name: Install dependencies for tox
           run: |

@@ -4,3 +4,34 @@ requires = [
     "wheel",
 ]
 build-backend = "maturin"
+
+[project]
+name = "ryaml"
+version = "0.2.0"
+description = "A simple yaml serializer/deserializer using Rust."
+readme = "README.md"
+requires-python = ">=3.7,<4"
+license = {file = "LICENSE"}
+keywords = []
+authors = [
+    {name = "Ethan Smith", email = "ethan@ethanhs.me"},
+]
+maintainers = [
+    {name = "Ethan Smith", email = "ethan@ethanhs.me"},
+]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Development Status :: 3 - Alpha",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+]
+
+[project.urls]
+homepage = "https://github.com/ethanhs/ryaml"
+repository = "https://github.com/ethanhs/ryaml"

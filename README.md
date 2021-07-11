@@ -100,6 +100,9 @@ assert docs[0]['a']['key'] is None
 This project is standing on the shoulders of giants, and would not be possible without:
 
 [pyo3](https://pyo3.rs/)
+
 [serde-yaml](https://github.com/dtolnay/serde-yaml)
+
 [yaml-rust](https://github.com/chyh1990/yaml-rust)
+
 [pyo3-file](https://github.com/omerbenamram/pyo3-file)

@@ -14,14 +14,14 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        python-version: ['3.6', 'pypy-3.7']
+        python-version: ['3.7', 'pypy-3.7']
         os: [ubuntu-latest, windows-latest, macos-latest]
       fail-fast: false
     steps:
         - name: checkout
           uses: actions/checkout@v2
         - name: setup python
-          uses: actions/setup-python@v1
+          uses: actions/setup-python@v2
           with:
             python-version: ${{ matrix.python-version }}
 
@@ -42,7 +42,7 @@ jobs:
           if: startsWith(matrix.os, 'macos')
           uses: messense/maturin-action@v1
           with:
-            args: --release --universal2 --out dist --no-sdist -m python/Cargo.toml
+            args: --release --universal2 --out dist --no-sdist -m Cargo.toml
 
         - name: Install dependencies for tox
           run: |

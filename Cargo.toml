@@ -11,7 +11,7 @@ name = "ryaml"
 crate-type = ["cdylib", "rlib"]
 
 [features]
-default = ["pyo3/abi3-py37"]
+abi3 = ["pyo3/abi3-py37"]
 
 [dependencies]
 serde_yaml = "0.8.17"

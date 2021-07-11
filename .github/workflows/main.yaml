@@ -37,14 +37,14 @@ jobs:
           uses: messense/maturin-action@v1
           with:
             target: x86_64
-            args: --release --out dist --no-sdist --cargo-extra-args="--no-default-features" -m Cargo.toml
+            args: --release --out dist --no-sdist -m Cargo.toml
 
         - name: Build wheels - x86_64 - CPython
           if: "!startsWith(matrix.python-version, 'pypy')"
           uses: messense/maturin-action@v1
           with:
             target: x86_64
-            args: --release --out dist --no-sdist -m Cargo.toml
+            args: --release --out dist --no-sdist --cargo-extra-args="--features=abi3" -m Cargo.toml
 
         - name: Build wheels - universal2
           if: startsWith(matrix.os, 'macos')

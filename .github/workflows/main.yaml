@@ -2,14 +2,10 @@ name: run tests
 
 on:
   push:
-    paths-ignore:
-      - '.pre-commit-config.yaml'
     branches:
       - main
       - dev
   pull_request:
-    paths-ignore:
-      - '.pre-commit-config.yaml'
     branches:
       - main
       - dev

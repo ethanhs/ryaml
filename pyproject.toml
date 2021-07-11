@@ -8,7 +8,7 @@ build-backend = "maturin"
 [project]
 name = "ryaml"
 version = "0.2.0"
-description = "A simple yaml serializer/deserializer using Rust."
+description = "A simple yaml serializer and deserializer using Rust."
 readme = "README.md"
 requires-python = ">=3.7,<4"
 license = {file = "LICENSE"}

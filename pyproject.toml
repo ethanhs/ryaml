@@ -1,13 +1,13 @@
 [build-system]
 requires = [
-    "maturin>=0.10,<0.11",
+    "maturin>=0.11.2,<0.12",
     "wheel",
 ]
 build-backend = "maturin"
 
 [project]
 name = "ryaml"
-version = "0.2.0.post1"
+version = "0.3.0"
 description = "A simple yaml serializer and deserializer using Rust."
 readme = "README.md"
 requires-python = ">=3.7,<4"

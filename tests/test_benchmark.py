@@ -1,6 +1,10 @@
 import ryaml
 import yaml
-from yaml import CSafeLoader as Loader, CDumper as Dumper
+import platform
+if platform.python_implementation() == 'CPython':
+    from yaml import CSafeLoader as Loader, CDumper as Dumper
+else:
+    from yaml import SafeLoader as Loader, Dumper as Dumper
 import pytest
 
 DATA = [['college', -380608299.3165369, {'closely': 595052867, 'born': False, 'stomach': True, 'expression': True,

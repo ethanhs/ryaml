@@ -1,3 +1,4 @@
+import pytest
 import ryaml
 
 def test_loads_empty():
@@ -23,3 +24,16 @@ def test_loads_key_sequence():
         - 5
 
     ''') == { 'key': [4, 5] }
+
+
+def test_duplicate_key():
+    with pytest.raises(ryaml.InvalidYamlError):
+        ryaml.loads("""
+        a:
+            - b
+            - c
+
+        a:
+            q: a
+            q: b
+        """)

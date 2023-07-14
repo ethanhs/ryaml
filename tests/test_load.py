@@ -24,7 +24,6 @@ def test_load_key_sequence(yaml_file):
     key:
         - 4
         - 5
-
     ''')
     yaml_file.seek(0)
     ryaml.load(yaml_file) == { 'key': [4, 5] }
